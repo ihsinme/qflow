@@ -989,7 +989,7 @@ DefReadPins(FILE *f, char *sname, float oscale, int total)
 
 		/* Get pin name */
 		token = LefNextToken(f, TRUE);
-		if (sscanf(token, "%2047s", pinname) != 1)
+		if (sscanf(token, "%1023s", pinname) != 1)
 		{
 		    LefError(DEF_ERROR, "Bad pin statement:  Need pin name\n");
 		    LefEndStatement(f);
